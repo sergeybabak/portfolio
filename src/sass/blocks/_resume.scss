@@ -16,7 +16,7 @@
                 height: 15px;
                 border-radius: 100%;
                 position: absolute;
-                left: 0;
+                left: -7px;
                 top: 50%;
                 transform: translateY(-50%);
                 background-color: $main-color;
@@ -24,6 +24,59 @@
         }
         ul {
             list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    background-color: #000;
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 1px;
+            background-color: #000;
+            top: 63px;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+        &-icon {
+            position: absolute;
+            @include before_circle;
+            top: 45px;
+            left: 45px;
+            img {
+                position: absolute;
+                top: 14px;
+                left: 17px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
         }
     }
 }
