@@ -1,0 +1,68 @@
+.tools {
+    padding-top: 120px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        justify-content: center;
+        column-gap: 270px;
+        gap: 13px;
+        margin-top: 60px;
+    }
+    &__item {
+        border: 1px solid rgb(0, 0, 0);
+        background: rgba(196, 196, 196, 0);
+        padding: 30px 30px 25px 30px;
+    }
+    &__img {
+        display: flex;
+        min-height: 65px;
+        align-items: center;
+    }
+    &__name {
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__text {
+        margin-top: 10px;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    &__percents {
+        margin-top: 120px;
+        display: grid;
+        grid-template: repeat(2, 70px) / repeat(3, 350px);
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+    &__cell {
+        position: relative;
+        padding-top: 9px;
+    }
+    &__hea {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 16px;
+        @include before_circle;
+        &:before {
+            top: 0;
+        }
+    }
+    &__index-bottom, &__index-top {
+        width: 350px;
+        height: 14px;
+        border-radius: 4px;
+        background: #E8E4DE;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &__index-top {
+        background: $main-color;
+    }
+}
